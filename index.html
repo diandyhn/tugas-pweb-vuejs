@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Tugas Kalkulator dengan Vue</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="wrapper" id="app">
+    <div class="container">
+      <div class="header-container">
+        <h1 id="toast" style="align-items: center;">Kalkulator</h1>
+      </div>
+      <div>
+        <input type="text" v-model="result" placeholder="Hasil" readonly />
+        <input type="button" value="C" @click="clearResult" id="clear-button" />
+      </div>
+      <div>
+        <input type="button" value="1" @click="liveScreen(1)" />
+        <input type="button" value="2" @click="liveScreen(2)" />
+        <input type="button" value="3" @click="liveScreen(3)" />
+        <input type="button" value="+" @click="liveScreen('+')" />
+      </div>
+      <div>
+        <input type="button" value="4" @click="liveScreen(4)" />
+        <input type="button" value="5" @click="liveScreen(5)" />
+        <input type="button" value="6" @click="liveScreen(6)" />
+        <input type="button" value="-" @click="liveScreen('-')" />
+      </div> 
+      <div>
+        <input type="button" value="7" @click="liveScreen(7)" />
+        <input type="button" value="8" @click="liveScreen(8)" />
+        <input type="button" value="9" @click="liveScreen(9)" />
+        <input type="button" value="x" @click="liveScreen('*')" />
+      </div>
+      <div>
+        <input type="button" value="/" @click="liveScreen('/')" />
+        <input type="button" value="0" @click="liveScreen(0)" />
+        <input type="button" value="." @click="liveScreen('.')" />
+        <input type="button" value="=" @click="calculate" />
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
